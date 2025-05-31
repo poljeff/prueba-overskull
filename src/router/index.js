@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router"
-import ProyectosView from "../views/ProyectosView.vue"
-import TareasView from "../views/TareasView.vue"
-import TareasCrearView from "../views/TareasCrearView.vue"
+
+const ProyectosView= () => import('../views/ProyectosView.vue')
+const TareasView= () => import('../views/TareasView.vue')
+const TareasCrearView= () => import('../views/TareasCrearView.vue')
 
 const router =  createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),

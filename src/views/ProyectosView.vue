@@ -1,6 +1,13 @@
 <template>
-    <div>
-        <h1>Proyectos</h1>
+    <div class="o-container pt-6">
+        <div class="flex items-center justify-between mb-6">
+            <h1 class="text-3xl font-bold">Proyectos</h1>
+            <div>
+                <router-link :to="{ name: 'Crear' }" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4">
+                    Agregar Tarea
+                </router-link>
+            </div>
+        </div>
         <tabla-proyectos v-if="proyectos_download" :headers="cabeceras" :data="proyectos" />
         <div v-else>
             <p>Cargando...</p>
